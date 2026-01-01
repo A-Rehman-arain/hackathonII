@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(sp.constitution)",
+      "Bash(git fetch --all --prune)",
+      "Bash(.specify/scripts/powershell/create-new-feature.ps1 -Json \"Create the Phase I specification for the \"\"Evolution of Todo\"\" project.\n\nPhase I Scope:\n- In-memory Python console application\n- Single user\n- No persistence beyond runtime\n\nRequired Features \\(Basic Level ONLY\\):\n1. Add Task\n2. View Task List\n3. Update Task\n4. Delete Task\n5. Mark Task Complete / Incomplete\n\nSpecification must include:\n- Clear user stories for each feature\n- Task data model \\(fields and constraints\\)\n- CLI interaction flow \\(menu-based\\)\n- Acceptance criteria for each feature\n- Error cases \\(invalid ID, empty task list\\)\n\nStrict Constraints:\n- No databases\n- No files\n- No authentication\n- No web or API concepts\n- No advanced or intermediate features\n- No references to future phases\n\nThis specification must comply with the global constitution\nand fully define WHAT Phase I must deliver.\" --number 1 --short-name \"todo-app\")",
+      "Bash(.specify/scripts/powershell/setup-plan.ps1 -Json)",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(pip install pytest)",
+      "Bash(python todo_app.py)"
+    ]
+  }
+}

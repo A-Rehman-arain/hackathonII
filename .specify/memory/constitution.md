@@ -1,55 +1,86 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT:
+Version change: 1.0.0 → 1.0.0 (initial constitution)
+Modified principles: None (new constitution)
+Added sections: All sections (initial constitution creation)
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md ✅ updated
+- .specify/templates/spec-template.md ✅ updated
+- .specify/templates/tasks-template.md ✅ updated
+- .specify/templates/commands/*.md ⚠ pending
+Follow-up TODOs: None
+-->
+# Evolution of Todo Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Spec-Driven Development Mandate
+All development must follow the Spec-Driven Development lifecycle: Constitution → Specs → Plan → Tasks → Implement. No agent may write code without approved specs and tasks. All work must strictly adhere to this sequence to ensure traceability and quality.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Agent Behavior Rules
+Agents must operate within defined constraints: No manual coding by humans, no feature invention beyond approved specifications, no deviation from approved specifications, and all refinement must occur at the spec level, not code level.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Phase Governance
+Each phase of the project is strictly scoped by its specification. Future-phase features must never leak into earlier phases. Architecture may evolve only through updated specs and plans, ensuring controlled and deliberate progression.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Technology Stack Compliance
+Backend development must use Python with FastAPI and SQLModel. Frontend (in later phases) must use Next.js. Database must be Neon DB. OpenAI Agents SDK and MCP must be used for agent functionality. Docker, Kubernetes, Kafka, and Dapr are reserved for later phases as specified.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Quality Principles
+All code must follow clean architecture principles with stateless services where required. Clear separation of concerns must be maintained. All components must be cloud-native ready with proper observability and scalability considerations.
 
-### [PRINCIPLE_6_NAME]
+### Implementation Constraints
+All changes must be small, testable, and reference code precisely. No unrelated edits are permitted. Code must maintain backward compatibility where specified. All implementations must include proper error handling and validation.
 
+## Additional Constraints
 
-[PRINCIPLE__DESCRIPTION]
+Technology Requirements:
+- Python 3.9+ for all backend services
+- FastAPI for web framework
+- SQLModel for database interactions
+- Neon DB as the primary database
+- OpenAI Agents SDK for AI functionality
+- MCP for communication protocols
+- Docker for containerization (later phases)
+- Kubernetes for orchestration (later phases)
+- Kafka for messaging (later phases)
+- Dapr for distributed systems (later phases)
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Security Requirements:
+- All secrets must be stored in environment variables
+- No hardcoded credentials or tokens
+- Proper authentication and authorization for all endpoints
+- Input validation and sanitization required
+- Secure communication protocols (HTTPS, encrypted storage)
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+Performance Standards:
+- Services must handle expected load requirements
+- Proper caching strategies implemented
+- Database queries must be optimized
+- Response times must meet defined SLAs
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Spec-First Development:
+- All features must begin with approved specifications
+- Specifications must be reviewed and approved before implementation
+- Implementation must strictly follow approved specifications
+- Deviations require updated specifications
+
+Review Process:
+- All code changes require peer review
+- Reviews must verify compliance with specifications
+- Automated tests must pass before merging
+- Code quality checks must be satisfied
+
+Quality Gates:
+- All tests must pass (unit, integration, end-to-end)
+- Code coverage requirements must be met
+- Security scans must pass
+- Performance benchmarks must be satisfied
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution acts as the supreme governing document for all agents and development activities. All work must comply with these principles. Amendments require formal documentation, approval process, and migration planning. All pull requests and code reviews must verify compliance with this constitution. This constitution remains stable across all phases of the "Evolution of Todo" project and supersedes any conflicting practices or procedures.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-02 | **Last Amended**: 2026-01-02
